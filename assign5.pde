@@ -105,11 +105,11 @@ void draw()
          fill(255,0,0);
          rect(10,5,blood,20);
          
-         //hp
-         image(hp,1,0);
+        //hp
+        image(hp,1,0);
          
-         //treasure
-         image(treasure,treasureX,treasureY);
+        //treasure
+        image(treasure,treasureX,treasureY);
          
         //fighter
         image(fighter, fighterX, fighterY);
@@ -188,7 +188,7 @@ void draw()
               enemyY[i]=1000;
             }
              for(int j=0;j<5;j++){
-              if(isHit(bulletX[j],bulletY[j],bullet.width,bullet.height,enemyX[i],enemyY[i],enemy.width,enemy.height)){
+              if(isHit(bulletX[j],bulletY[j],bullet.width,bullet.height,enemyX[i],enemyY[i],enemy.width,enemy.height) && bulletNum[j]==true){
                 for(int k=0;k<5;k++){
                   hitPositionX[k] = enemyX[i];
                   hitPositionY[k] = enemyY[i];
@@ -220,7 +220,7 @@ void draw()
                 enemyY[i]=1000;
             }
             for(int j=0;j<5;j++){
-              if(isHit(bulletX[j],bulletY[j],bullet.width,bullet.height,enemyX[i],enemyY[i],enemy.width,enemy.height)){
+              if(isHit(bulletX[j],bulletY[j],bullet.width,bullet.height,enemyX[i],enemyY[i],enemy.width,enemy.height) && bulletNum[j]==true){
                 for(int k=0;k<5;k++){
                   hitPositionX[k] = enemyX[i];
                   hitPositionY[k] = enemyY[i];
@@ -252,7 +252,7 @@ void draw()
                 enemyY[i]=1000;
               }
              for(int j=0;j<5;j++){
-              if(isHit(bulletX[j],bulletY[j],bullet.width,bullet.height,enemyX[i],enemyY[i],enemy.width,enemy.height)){
+              if(isHit(bulletX[j],bulletY[j],bullet.width,bullet.height,enemyX[i],enemyY[i],enemy.width,enemy.height)&& bulletNum[j]==true){
                 for(int k=0;k<5;k++){
                   hitPositionX[k] = enemyX[i];
                   hitPositionY[k] = enemyY[i];
